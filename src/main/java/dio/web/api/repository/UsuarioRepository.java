@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class UserRepository {
+public class UsuarioRepository {
 
     public void save (Usuario usuario){
         if(usuario.getId() == null)
@@ -19,7 +19,7 @@ public class UserRepository {
     }
 
     public void deleteById (Integer id){
-        System.out.println(String.format("DELETE/id - Recebendo o id: %d para excluir um usuario"));
+        System.out.println(String.format("DELETE/id - Recebendo o id:  para excluir um usuario"));
         System.out.println(id);
     }
 
@@ -32,12 +32,12 @@ public class UserRepository {
     }
 
     public Usuario findById(Integer id){
-        System.out.println(String.format("FIND/id - Recebendo o id: %d para localizar um usuário"));
+        System.out.println(String.format("FIND/id - Recebendo o id:  para localizar um usuário"));
         return new Usuario("gleyson", "password");
     }
 
-    public Usuario findByUsername(){
-        System.out.println(String.format("FIND/username - Recebendo o username: %s para retornar um usuário "));
+    public Usuario findByUsername(String username){
+        System.out.println(String.format("FIND/username - Recebendo o username:  para retornar um usuário "));
         return new Usuario("gleyson", "password");
     }
 
